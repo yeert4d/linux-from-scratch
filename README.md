@@ -27,7 +27,7 @@ This project focuses on:
   - Understanding the Linux boot process
   - Building a toolchain from source
   - Learning how core system components interact
-  - Documenting decisions, mistakes, and fixed.
+  - Documenting decisions, mistakes, and fixes.
 
 Out of scope:
   - Desktop environments
@@ -38,7 +38,7 @@ Out of scope:
 ---
 
 ## Environment
-  - **Host OS:** Debian (stable)
+  - **Host OS:** Debian 13 (stable)
   - **Environment:** VirtualBox virtual machine (BIOS mode)
   - **Approach:** Minimal host system, terminal-based workflow
 
