@@ -1,0 +1,47 @@
+# Chapter 2
+I will be documenting this chapter chronologically, and according to the documentation. So if I write 2.1 for instance, this is a reference to 2.1 in the documentation. The section that follows, should be a log of my experience with that section in the documentation.
+
+---
+
+## Overview of the chapter (2.1)
+This chapter goes over and checks the host tools necessary for the build, and if they are not present will require to be installed. We then prepare the disk partition, create it and its filesystem, before finally mounting it.
+
+## Host system requirements (2.2)
+
+### Hardware (2.2.1)
+Four cores and 8GB memory is reccomended. The virtual machine has been allocated 8GB memory and 5 cores, if the build time becomes an issue then this will be reallocated.
+
+### Software (2.2.2)
+
+My host system must have the following installed with their respective minimum versions:
+  - Bash (3.2)
+  - Binutils (2.13.1)
+  - Coreutils (8.1)
+  - Diffutils (2.8.1)
+  - Findutils (4.2.31)
+  - Gawk (4.0.1) 
+  - GCC (5.4) 
+  - Grep (2.5.1)
+  - Gzip (1.3.12)
+  - Linux Kernel (5.4)
+  - M4 (1.4.10)
+  - Make (4.0)
+  - Patch (2.5.4)
+  - Perl (5.8.8)
+  - Python (3.4)
+  - Sed (4.1.5)
+  - Tar (1.22)
+  - Texinfo (5.0)
+  - Xz (5.0.0)
+
+In order to check if my host system has all of the appropriate software and versions I used the official version-check script provided in the LFS documentation
+
+The script was executed using:
+```sh
+bash version-check.sh
+
+Several required host tools were missing or below the minimum version. These were installed using the Debian package manager (`apt`). After installation, the version-check script was re-run and all requirements were satisfied.
+
+
+
+
