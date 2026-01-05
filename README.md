@@ -1,3 +1,13 @@
+## 📌 Table of Contents
+
+1. [Overview](#linux-from-scratch)
+2. [Scope and Intent](#scope-and-intent)
+3. [Environment](#environment)
+4. [Structure](#structure)
+5. [Status](#status)
+6. [Next Steps](#next-steps)
+
+
 # Linux-from-scratch - Build Log
 
 This repository documents my build of a linux system from first principles by
@@ -48,5 +58,15 @@ This repository prioritieses **clarity over completeness**.
 
 This project is in process. 
 As the build proceeds notes will be added incrementally.
+
+## Next steps
+
+The next items planned for this project are:
+  -Document host toolchain setup (Debian host);
+  -Begin LFS Chapter 2 build notes;
+  -Capture errors and fixes as they occur;
+  -Write up lessons learned after initial system build.
+
+  
 
 
