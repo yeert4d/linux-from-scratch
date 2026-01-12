@@ -37,26 +37,32 @@ My host system must have the following installed with their respective minimum v
 In order to check if my host system has all of the appropriate software and versions I used the official version-check script provided in the LFS documentation
 
 The script was executed using:
+
 ```sh
 bash version-check.sh
+```
+
 
 Several required host tools were missing or below the minimum version. These were installed using the Debian package manager (`apt`). After installation, the version-check script was re-run and all requirements were satisfied.
 
 ### 2.3.1 + 2.3.2
 
 LFS requires the certain steps to be excecuted as the root user (unrestricted access, privileged user), whereas other must be run as an unprivileged user (LFS). This seperation prevents accidental modification of the host system. The following commands must therefore be run inside of the terminal.
-
+```
   - sudo-i -> gives me root user access, I am essentially in "root mode" here. This causes the terminal to go       from name@hostname: ~$ to root@hostname: ~#, indicating that we are in root user mode.
   - export LFS=/mnt/lfs -> This takes "LFS" from a shell variable and makes it an environment variable. Many        commands in the documentation contain $LFS, if the variable is not exported then commands may act on /,         instead of /mnt/lfs. This command is a safety mechanism to stop the commands acting on the root user.
   - echo $LFS -> just prints what is stored inside of the variable LFS, and should print /mnt/lfs, which it         does 
+```
 
 I have to then mount the mnt/lfs partition, I can check if this is done by using the bash command:  lsblk, this command must be done as the root user. Since I have not mounted it, there is no sign of mnt/lfs being mounted. Therefore I must mount it to a disk partition which I will do by creating a loopback file. I will make this 30gb.
 I must use the following commands to do this:
 
+```
   - mkdir -pv /mnt/lfs -> Creates a directory to hold the virtual disk
   - dd if=/dev/zero of=/lfs.img bs=1M count=30720 status=progress -> Creates a 30gb loopback file. 
   - mkfs.ext4 /lfs.img -> Format the file as ext4
   - mount -v /lfs.img /mnt/lfs -> Mount the file at /mnt/lfs
+```
 
 Finally I just verify it with the same2 lsblk command as before. It has been correctly mounted, as the file now shows when the command runs. Therefore the dedicated ext4 filesystem mounted at /mnt/lfs has been created, satisfying the documentations requirement for an isolated build environment before proceeding to user and toolchain preperation.
 
