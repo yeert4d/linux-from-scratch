@@ -45,7 +45,7 @@ bash version-check.sh
 
 Several required host tools were missing or below the minimum version. These were installed using the Debian package manager (`apt`). After installation, the version-check script was re-run and all requirements were satisfied.
 
-### 2.3.1 + 2.3.2
+### Building LFS in stages (2.3)
 
 LFS requires the certain steps to be excecuted as the root user (unrestricted access, privileged user), whereas other must be run as an unprivileged user (LFS). This seperation prevents accidental modification of the host system. The following commands must therefore be run inside of the terminal.
 ```
