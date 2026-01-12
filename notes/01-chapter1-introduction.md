@@ -1,6 +1,6 @@
 # Chapter 1 - Introduction
 
-## Purpose of this chapter@
+## Purpose of this chapter
 Chapter 1 introduces the project, its scope and the structure of the further document.
 
 ## Constraints and expectations:
